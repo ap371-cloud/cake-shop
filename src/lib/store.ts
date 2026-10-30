@@ -142,9 +142,11 @@ export async function createOrder(
   const total = subtotal + deliveryFee;
 
   const now = new Date().toISOString();
+  const slug = makeOrderNumber();
   const order: Order = {
     id: crypto.randomUUID(),
-    orderNumber: makeOrderNumber(),
+    orderNumber: slug,
+    slug,
     customerName: payload.customerName,
     phone: payload.phone,
     email: payload.email,

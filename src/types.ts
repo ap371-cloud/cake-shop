@@ -55,6 +55,8 @@ export type OrderStatus =
 export type Order = {
   id: string;
   orderNumber: string;
+  slug: string;
+  user_id?: string;
   customerName: string;
   phone: string;
   email?: string;
@@ -69,7 +71,14 @@ export type Order = {
   deliverySlot: string;
   deliveryNotes?: string;
   paymentMethod: "cash_on_delivery" | "upi_on_delivery";
-  items: { name: string; price: number; quantity: number; variant?: string }[];
+  items: {
+    name: string;
+    price: number;
+    quantity: number;
+    variant?: string;
+    slug?: string;
+    variantId?: string;
+  }[];
   subtotal: number;
   deliveryFee: number;
   total: number;
