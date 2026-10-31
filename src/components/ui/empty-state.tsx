@@ -1,4 +1,8 @@
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { buttonStyles } from "@/components/ui/button";
+
+type EmptyStateAction = React.ReactNode | { label: string; href: string };
 
 export function EmptyState({
   icon,
@@ -10,7 +14,7 @@ export function EmptyState({
   icon?: React.ReactNode;
   title: string;
   description?: string;
-  action?: React.ReactNode;
+  action?: EmptyStateAction;
   className?: string;
 }) {
   return (
@@ -20,10 +24,36 @@ export function EmptyState({
         className
       )}
     >
-      {icon && <div className="text-outline">{icon}</div>}
+      {icon &&
+        (typeof icon === "string" ? (
+          <span aria-hidden className="material-symbols-outlined text-[40px] text-outline">
+            {icon}
+          </span>
+        ) : (
+          <div className="text-outline">{icon}</div>
+        ))}
       <h3 className="text-headline-sm">{title}</h3>
       {description && <p className="max-w-sm text-body text-on-surface-variant">{description}</p>}
-      {action && <div className="mt-2">{action}</div>}
+      {action && (
+        <div className="mt-2">
+          {isActionLink(action) ? (
+            <Link href={action.href} className={buttonStyles("primary", "md")}>
+              {action.label}
+            </Link>
+          ) : (
+            action
+          )}
+        </div>
+      )}
     </div>
+  );
+}
+
+function isActionLink(action: EmptyStateAction): action is { label: string; href: string } {
+  return (
+    typeof action === "object" &&
+    action !== null &&
+    "label" in action &&
+    "href" in action
   );
 }

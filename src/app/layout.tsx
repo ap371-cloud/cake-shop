@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { Providers } from "@/components/providers";
 import { getCurrentUser } from "@/lib/auth";
 
 const inter = Inter({
@@ -56,11 +57,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         >
           Skip to content
         </a>
-        <SiteHeader user={user} />
-        <main id="main" className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
+        <Providers>
+          <SiteHeader user={user} />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
+        </Providers>
       </body>
     </html>
   );

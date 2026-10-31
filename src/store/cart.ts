@@ -91,3 +91,5 @@ export function cartCount(lines: CartLine[]) {
 export function cartSubtotal(lines: CartLine[]) {
   return lines.reduce((sum, line) => sum + line.unitPrice * line.quantity, 0);
 }
+
+export type AddLineInput = Omit<CartLine, "quantity">;

@@ -1,8 +1,6 @@
 -- Crumble & Co. — initial schema, policies and order function.
 -- Apply with: supabase db push   (or paste into the Supabase SQL editor)
 
-create extension if not exists pgcrypto;
-
 create type public.user_role as enum ('customer', 'admin');
 create type public.order_status as enum ('pending', 'confirmed', 'baking', 'dispatched', 'delivered', 'cancelled');
 create type public.payment_method as enum ('cash_on_delivery', 'upi_on_delivery');

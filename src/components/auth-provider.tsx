@@ -2,7 +2,6 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import type { UserProfile } from "@/types";
-import { getCurrentUser } from "@/lib/auth";
 
 type AuthContext = {
   user: UserProfile | null;
@@ -18,8 +17,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const refresh = async () => {
     try {
-      const u = await getCurrentUser();
-      setUser(u);
+      const response = await fetch("/api/auth/me", { cache: "no-store" });
+      if (!response.ok) throw new Error("not signed in");
+      const data = (await response.json()) as { user: UserProfile | null };
+      setUser(data.user);
     } catch {
       setUser(null);
     }
@@ -40,7 +41,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 }
 
 export function useAuth() {
-  const ctx = useContext(Ctx);
-  if (!ctx) throw new Error("useAuth must be used within AuthProvider");
-  return ctx;
+  const context = useContext(Ctx);
+  if (!context) throw new Error("useAuth must be used inside <AuthProvider>.");
+  return context;
 }

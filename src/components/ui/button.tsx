@@ -1,3 +1,4 @@
+import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
 type Variant = "primary" | "secondary" | "outline" | "ghost" | "danger";
@@ -35,11 +36,33 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: Variant;
   size?: Size;
   loading?: boolean;
+  asChild?: boolean;
 };
 
-export function Button({ variant = "primary", size = "md", loading, className, children, disabled, ...rest }: ButtonProps) {
+export function Button({
+  variant = "primary",
+  size = "md",
+  loading,
+  asChild,
+  className,
+  children,
+  disabled,
+  ...rest
+}: ButtonProps) {
+  const Comp = asChild ? Slot : "button";
+
+  // Slot accepts exactly one child, so the spinner is only rendered for a
+  // real <button>.
+  if (asChild) {
+    return (
+      <Comp className={buttonStyles(variant, size, className)} {...rest}>
+        {children}
+      </Comp>
+    );
+  }
+
   return (
-    <button
+    <Comp
       className={buttonStyles(variant, size, className)}
       disabled={disabled || loading}
       aria-busy={loading || undefined}
@@ -52,6 +75,6 @@ export function Button({ variant = "primary", size = "md", loading, className, c
         />
       )}
       {children}
-    </button>
+    </Comp>
   );
 }

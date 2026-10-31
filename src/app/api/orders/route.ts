@@ -1,73 +1,91 @@
 import { NextResponse } from "next/server";
-import { createOrder, listOrders } from "@/lib/store";
 import { getCurrentUser } from "@/lib/auth";
+import { createOrder, listOrders, type CreateOrderInput } from "@/lib/server/orders";
+import { clientKey, rateLimit } from "@/lib/server/rate-limit";
 
-// POST /api/orders — place an order. Validates everything server-side.
+const REQUIRED = [
+  "customerName",
+  "phone",
+  "deliveryDate",
+  "deliverySlot",
+  "paymentMethod",
+  "deliveryMethod",
+] as const;
+
+function validate(body: CreateOrderInput & Record<string, unknown>) {
+  const missing = REQUIRED.filter((field) => !String(body[field] ?? "").trim());
+  if (missing.length > 0) return `Missing required fields: ${missing.join(", ")}`;
+
+  if (!/^[0-9+\s()-]{7,15}$/.test(String(body.phone))) return "Enter a valid phone number.";
+  if (body.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(body.email))) {
+    return "Enter a valid email address.";
+  }
+
+  if (body.deliveryMethod === "delivery") {
+    for (const field of ["addressLine1", "city", "state", "pinCode"] as const) {
+      if (!String(body[field] ?? "").trim()) return "A delivery address is required.";
+    }
+    if (!/^\d{6}$/.test(String(body.pinCode))) return "PIN code must be 6 digits.";
+  }
+
+  if (!["cash_on_delivery", "upi_on_delivery"].includes(body.paymentMethod)) {
+    return "Choose a valid payment method.";
+  }
+  if (!["delivery", "pickup"].includes(body.deliveryMethod)) {
+    return "Choose delivery or pickup.";
+  }
+
+  const deliveryDate = new Date(body.deliveryDate);
+  if (Number.isNaN(deliveryDate.getTime())) return "Choose a valid delivery date.";
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  if (deliveryDate < today) return "Delivery date cannot be in the past.";
+
+  if (!Array.isArray(body.items) || body.items.length === 0) return "Your cart is empty.";
+  if (body.items.length > 50) return "Too many different items in one order.";
+
+  if (body.customerName.length > 100) return "Name is too long.";
+  if ((body.deliveryNotes ?? "").length > 600) return "Delivery notes are too long.";
+
+  return null;
+}
+
+function friendlyError(message: string) {
+  if (message.startsWith("INSUFFICIENT_STOCK:")) {
+    return `Not enough stock for ${message.split(":")[1]}.`;
+  }
+  if (message === "ITEM_UNAVAILABLE") return "One of the items is no longer available.";
+  if (message === "CART_EMPTY") return "Your cart is empty.";
+  if (message === "INVALID_QUANTITY") return "Invalid quantity.";
+  return message;
+}
+
 export async function POST(request: Request) {
+  if (!rateLimit(clientKey(request, "orders"), 10, 60_000)) {
+    return NextResponse.json(
+      { error: "Too many order attempts. Please wait a minute." },
+      { status: 429 }
+    );
+  }
+
   try {
-    const body = await request.json();
+    const body = (await request.json()) as CreateOrderInput & Record<string, unknown>;
+    const problem = validate(body);
+    if (problem) return NextResponse.json({ error: problem }, { status: 400 });
+
     const user = await getCurrentUser();
-
-    const required = [
-      "customerName",
-      "phone",
-      "addressLine1",
-      "addressLine2",
-      "city",
-      "state",
-      "pinCode",
-      "deliveryDate",
-      "deliverySlot",
-      "paymentMethod",
-      "deliveryMethod",
-    ];
-    const missing = required.filter((k) => !body[k] || String(body[k]).trim() === "");
-    if (missing.length) {
-      return NextResponse.json(
-        { error: `Missing required fields: ${missing.join(", ")}` },
-        { status: 400 }
-      );
-    }
-
-    if (!/^\d{6}$/.test(String(body.pinCode))) {
-      return NextResponse.json({ error: "Invalid PIN code." }, { status: 400 });
-    }
-    if (!/^[0-9+\s()-]{7,15}$/.test(String(body.phone))) {
-      return NextResponse.json({ error: "Invalid phone number." }, { status: 400 });
-    }
-    if (body.customerName.length > 100 || body.addressLine1.length > 200 || body.addressLine2.length > 200) {
-      return NextResponse.json({ error: "Input too long." }, { status: 400 });
-    }
-    if (body.deliveryNotes && body.deliveryNotes.length > 600) {
-      return NextResponse.json({ error: "Delivery notes too long." }, { status: 400 });
-    }
-    if (!["cash_on_delivery", "upi_on_delivery"].includes(body.paymentMethod)) {
-      return NextResponse.json({ error: "Invalid payment method." }, { status: 400 });
-    }
-    if (!["delivery", "pickup"].includes(body.deliveryMethod)) {
-      return NextResponse.json({ error: "Invalid delivery method." }, { status: 400 });
-    }
-    if (!Array.isArray(body.items) || body.items.length === 0) {
-      return NextResponse.json({ error: "Cart is empty." }, { status: 400 });
-    }
-
-    const order = await createOrder({
-      ...body,
-      user_id: user?.id,
-    });
+    const order = await createOrder(body, user?.id);
     return NextResponse.json(order, { status: 201 });
-  } catch (err) {
-    const message = err instanceof Error ? err.message : "Could not place order.";
-    return NextResponse.json({ error: message }, { status: 400 });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Could not place the order.";
+    return NextResponse.json({ error: friendlyError(message) }, { status: 400 });
   }
 }
 
-// GET /api/orders — list the caller's own orders only.
 export async function GET() {
   const user = await getCurrentUser();
-  if (!user) {
-    return NextResponse.json({ error: "Unauthenticated." }, { status: 401 });
-  }
-  const orders = await listOrders(user.id);
+  if (!user) return NextResponse.json({ error: "Please sign in." }, { status: 401 });
+
+  const orders = await listOrders(user.role === "admin" ? undefined : user.id);
   return NextResponse.json(orders);
 }
