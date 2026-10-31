@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "inverse-on-surface": "#ffede7", "surface": "#fff8f6", "secondary-container": "#fed399", "on-tertiary-fixed-variant": "#51443b", "error-container": "#ffdad6", "on-primary-container": "#f0a38c", "on-secondary": "#ffffff", "background": "#fff8f6", "surface-container": "#ffe9e2", "secondary-fixed-dim": "#e9c087", "on-secondary-fixed-variant": "#5d4214", "surface-container-lowest": "#ffffff", "surface-container-high": "#fbe3db", "on-surface-variant": "#53433f", "tertiary-fixed": "#f2dfd2", "secondary": "#78592a", "primary-fixed-dim": "#ffb59f", "on-tertiary": "#ffffff", "on-tertiary-container": "#c4b3a7", "outline-variant": "#d8c2bc", "outline": "#85736e", "on-primary-fixed-variant": "#6e3726", "tertiary-container": "#51453c", "secondary-fixed": "#ffddb1", "surface-dim": "#ecd5cd", "on-background": "#251914", "inverse-primary": "#ffb59f", "surface-bright": "#fff8f6", "primary-container": "#6f3827", "inverse-surface": "#3b2d28", "on-tertiary-fixed": "#231a12", "surface-variant": "#f5ded6", "primary": "#532213", "primary-fixed": "#ffdbd0", "surface-container-highest": "#f5ded6", "on-secondary-fixed": "#291800", "tertiary-fixed-dim": "#d5c3b7", "surface-container-low": "#fff1ec", "on-primary": "#ffffff", "surface-tint": "#8b4e3c", "on-secondary-container": "#785a2a", "on-error-container": "#93000a", "on-surface": "#251914", "tertiary": "#3a2f26", "on-error": "#ffffff", "on-primary-fixed": "#370d02" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "display-lg-mobile": [ "Playfair Display" ], "title-lg": [ "Playfair Display" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Playfair Display" ], "price-lg": [ "Inter" ], "label-lg": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Playfair Display" ], "price-md": [ "Inter" ], "headline-lg": [ "Playfair Display" ], "display-lg": [ "Playfair Display" ] }, "fontSize": { "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "price-lg": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "26px", { "lineHeight": "34px", "fontWeight": "500" } ], "price-md": [ "16px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-low/95 backdrop-blur-md shadow-[0_4px_16px_-2px_rgba(66,37,29,0.05)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Crumble &amp; Co. Brand Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VEOn43cLK9cNjGFxyqFZPDrQtrFxEpMPeYZzFiKH-9Po7LWAeGv6gTDdWHBSdciDGTDSl9n1xAFRa6U6nXZWoW21x0elPqHLp0umH4mtKF2GK7XPJi9_FU4aUUrbdQi-dMBP1oHD_KZzWckD6cDvAJc4LekIGOlii1LhdOfPNQkYZ2uWF8iL9DzUgqqR4JbJdsJnD8Vyd7Ntr6QkBN1dk8p79c5_Ea_yqchcnYqTSk7g"/><div class="flex flex-col"><span class="font-title-lg text-title-lg tracking-tight text-primary font-semibold leading-none">Crumble &amp; Co.</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-medium mt-1">Bakery &amp; Patisserie</span></div></a></div><nav class="hidden md:flex items-center gap-space-lg lg:gap-space-xl h-full" data-active-classes="text-primary-container font-semibold border-b-2 border-primary-container"><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="home" href="#">Home</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="shop" href="#">Shop</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="custom-cakes" href="#">Custom Cakes</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="about-us" href="#">About Us</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md shrink-0"><button aria-label="Search Bakery Menu" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><a class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] leading-none font-bold flex items-center justify-center shadow-[0_2px_6px_rgba(66,37,29,0.2)]">2</span></a><div class="flex items-center gap-space-xs"><a class="flex items-center focus:outline-none" data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(66,37,29,0.15)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqKtpP221inMGQLNKLYpPqXqrJLAOkVteVc6ZDZtTrk-IUGMmQhABo8WW92lLwUYyzd8vyqnBOyNv3e8t4feJM06mwjQuTw6QGuy3LmpqFrTsitKX845F0ShqN63C9QV_qRlU0AevuzU4xf44t6-ctUCd6Q_kuZiLV3qTkynvgbR40-_Q7n_efqDON1_qGQ9ZM9XVxZyvKAIkMJ6jWBvFQ7bw0IoRb6irJqGmzfouB"/></a></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Story Hero Section -->
+<section class="relative w-full overflow-hidden bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Hero Copy -->
+<div class="lg:col-span-6 flex flex-col gap-space-md z-10">
+<div class="inline-flex items-center gap-space-xs self-start px-3 py-1 rounded-full bg-secondary-container/60 text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">cookie</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Artisan Atelier Story</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight leading-tight">
+            Baked with Love. <br class="hidden sm:inline"/>
+<span class="italic font-normal text-secondary">Made for Your Moments.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            We believe the sweetest memories are forged around unhurried artisan craftsmanship, heirloom grains, and pure cultured butter.
+          </p>
+<div class="pt-space-sm flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center justify-center gap-space-xs px-6 py-3.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-all duration-200" data-path="shop" href="#">
+<span>Taste The Collection</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+<span>Baking Fresh in Small Batches Since 2018</span>
+</div>
+</div>
+</div>
+<!-- Hero Editorial Visual Stack -->
+<div class="lg:col-span-6 relative mt-space-lg lg:mt-0">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out" data-alt="Close up artisan patisserie action with chef hands precisely scoring a proofed sourdough loaf and piping rich chocolate ganache on a bespoke celebration cake, soft warm morning window light, flour dust suspended in warm sunbeams, cream and chocolate tones, high detail editorial food quarterly aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3ntEZHGhM9BDlddC4Y1vrYN0JkCyfU7p73rAoUuTZ9R3f7Uly6eUI1YfQe6iiCFGLjXJuW9Ocd_GzRYqLocR3HmcoxuQ35cEfKK1q3KmDb7mIFp87vPrF69K70GGaM5YuN4-h7l3_yptPOLteVwsEo_-oo8dvyHvVurz3VqoQtyWTDLLDuThQ3CmcCOoQzVzXqh4VMtbNyuAevfZCeBQ-vSRUqoZq3vKUj9pOsi8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-surface/90 backdrop-blur-md shadow-md flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">100% From Scratch</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero premixes, artificial oils, or chemical stabilisers</p>
+</div>
+</div>
+<span class="font-price-md text-price-md text-primary font-semibold">Batch No. 84</span>
+</div>
+</div>
+<!-- Decorative Floating Card -->
+<div class="hidden sm:flex absolute -top-4 -right-4 bg-surface-container-lowest p-3 rounded-lg shadow-lg items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium uppercase tracking-wider">Normandy Cultured Butter</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Section: Story & Philosophy -->
+<section class="w-full bg-background py-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Text Column -->
+<div class="lg:col-span-6 flex flex-col gap-space-md order-2 lg:order-1">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Our Story &amp; Philosophy</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            Rejecting the Shortcuts, <br class="hidden sm:inline"/>
+            Honoring the Slow Craft.
+          </h2>
+<div class="space-y-4 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+<p>
+              Crumble &amp; Co. began in 2018 not inside a commercial factory, but around a small stone countertop in an sun-drenched quarter kitchen. We were exhausted by industrial bakeries masking dull flour with powdered shortenings, synthetic syrups, and high-fructose pastes.
+            </p>
+<p>
+              We chose the quiet path of the classical French atelier: slow 36-hour sourdough cold fermentation, stone-ground heirloom wheats milled locally, and real cultured cream butter with a minimum of 84% butterfat. Every bake you hold has been mixed, rested, laminated, and shaped by hands that take immense pride in the crust and the crumb.
+            </p>
+<p class="italic text-primary font-title-lg text-title-lg">
+              “A great cake doesn't simply decorate an occasion—it crystallises it in collective memory.”
+            </p>
+</div>
+<!-- Stats / Key Metrics -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low text-center">
+<span class="block font-price-lg text-price-lg text-primary">36h</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cold Ferment</span>
+</div>
+<div class="grid p-space-sm rounded-lg bg-surface-container-low text-center">
+<span class="block font-price-lg text-price-lg text-primary">84%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Butterfat Min</span>
+</div>
+<div class="grid p-space-sm rounded-lg bg-surface-container-low text-center">
+<span class="block font-price-lg text-price-lg text-primary">0%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Artificial Dyes</span>
+</div>
+</div>
+</div>
+<!-- Image Column -->
+<div class="lg:col-span-6 order-1 lg:order-2">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out" data-alt="Intimate vertical editorial photograph of an artisan pastry chef in a beige linen apron dusting pure white powdered sugar over freshly baked golden morning croissants, copper bakery tools in the soft blurred background, warm natural light, soft deep cocoa tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC0zDnwzArkmoFMG4pY_0eAnU5PeV91Ahk-IzeIaydrCA_-zsgfcRC8NjBueFCa7XemA0rAe6tf9BKBIavWUgqjqKn5_cxXofsXZtIx7aONZhho4iCUR8vZTmJYClWq8I4IMPQFzMv_7rHLx2ZAo_gu5eMEyBkoj-gG-3TzIq7OCTzRlFgPi_KFXqJ9wcYi9ga1wNa1w7gx9XvZKNLIzeKlXeTHEcQxZP1rK0cDLxO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-surface-container-lowest/95 backdrop-blur-sm shadow-md">
+<p class="font-title-lg text-title-lg text-primary font-semibold">Morning Lamination Routine</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily 5:00 AM sheeter folds for delicate honeycomb air-cells.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Guiding Values Section -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-lg flex flex-col items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">The Pillar Standard</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Guiding Values</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Every crumb adheres to four non-negotiable culinary tenets that preserve the authenticity of every bake.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div class="w-12 h-12 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">water_drop</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-1">100% Pure Cultured Butter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Churned slow from European-style cultures for authentic golden lamination, rich aroma, and an unmistakable velvety mouthfeel.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">local_fire_department</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-1">Small-Batch Baking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Our deck ovens are fired twice daily at 9:00 AM and 4:00 PM to guarantee that your table receives oven-warm freshness.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div class="w-12 h-12 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">eco</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-1">Thoughtful Inclusivity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Dedicated segregated eggless patisserie chambers, organic nut flours, and silk-smooth vegan chocolate ganaches crafted with respect.
+          </p>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">award_star</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-1">Zero-Compromise Purity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Real Madagascar bourbon vanilla pods, Valrhona 70% dark chocolate couverture, and sun-ripened berries sourced weekly.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Behind the Bakes Visual Gallery -->
+<section class="w-full bg-background py-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Behind The Flour Dust</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Behind The Bakes</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          A glimpse into the tactile movements and quiet artistry that unfold inside our bakehouse every single morning.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Tile 1 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intricate close up of vintage British Lambeth piping technique on a tiered wedding cake with cream colored royal icing scrolls and edible sugar pearls, soft natural light, warm cream aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu2ButAXq4gpH-2TywIhfb8XR76LGBE_gCvPawqHkKoO_muQpw71eC-uJvDCfv9d8bOzE5rBqrbRyxxn_LnWKcn_aTsNDvquxS3rsBC88WeYcejpjSI-JCimL0H21zQ5mnlwRmtSdeCvX8z1HVP3mLYYhzk65021gcvDatFZmguEMrJSn37nPsGtgHvmln5AshYOv4fIsV2dBJws3NJo4EC5PmCfcl-_dj6en301ou"/>
+<div class="absolute top-3 left-3 px-2 py-1 rounded bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              Artisan Craft
+            </div>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1 bg-surface-container-lowest">
+<h4 class="font-title-lg text-title-lg text-primary">Vintage Lambeth Piping</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Multi-layered royal icing scrolls carved for custom celebration cakes.</p>
+</div>
+</div>
+<!-- Tile 2 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Rustic freshly baked artisan sourdough boules with blistered deep brown crust cooling on dark metal wire racks, warm studio bakery light, dusted flour, warm brown and beige bakery aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWJtU_Kr_ujZjpp7XiFa35dPgCYph66BR00GaITXo62mZAwcRUWhNld-hHA1VCkZkNDRUfwItTKsBa8ruX9uQdK0Rx4lC8CQa05EYP2ccqCfyM59PuoK7r_vFI9gW7fE4xfKdyAaRhqw9tweKHCmVYYCIE2cLSooN1B8NRBRlqhwbF_7FENCFGnzooQ-_fEmwoPAXg0l0nNkp4vlP4--uPPnMqG6lVLv8TZ3Vy2kAX"/>
+<div class="absolute top-3 left-3 px-2 py-1 rounded bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              Morning Drop
+            </div>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1 bg-surface-container-lowest">
+<h4 class="font-title-lg text-title-lg text-primary">Wild Sourdough Boules</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Fermented for 36 hours, displaying deep blistered ear-crusts and sweet wild tang.</p>
+</div>
+</div>
+<!-- Tile 3 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Glossy dark chocolate Valrhona mirror glaze being slowly poured over an elegant round mousse entremet, reflecting bakery studio lights like liquid glass, rich cocoa and warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDoOS6LmpnAh6XF9DvwTLBYhUJx_tijTiKulmeLgP7QRt9fb5KrPRP13YXKbUF8t7lKGGLvQ5pl1zeYKhmRLMcelQKs74snuFpUmThlevKifsdvOCEWNUDvDAUBksgrxaPXRiqzMo0to9LPkV5HIHsYyBX3MmFZULfyNfNcTr-7mwZImY2norKkO-8bdgwhreLmw6JUh6dKtHyoRgxqW_8UShhnFkzt2TDkSNSaPPj"/>
+<div class="absolute top-3 left-3 px-2 py-1 rounded bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              French Entremet
+            </div>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1 bg-surface-container-lowest">
+<h4 class="font-title-lg text-title-lg text-primary">Dark Mirror Glaze Pour</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Valrhona 70% dark couverture applied at exactly 32°C for mirror shine.</p>
+</div>
+</div>
+<!-- Tile 4 -->
+<div class="group flex flex-col rounded-xl overflow-hidden bg-surface-container shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Chilled butter pastry tarts piled high with fresh raspberries, blackberries and blueberries delicately garnished with genuine 24-carat edible gold leaf flakes, macro culinary shot, warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-XdLClFzrPS95SpKsQid7rnbLtk8TiuOchSbsqhB9OZQfnn4RnTJqmloIxVWR8uB5pagnIbCrOn849JjmgOpMnAeNZ9kgXy7U2E3-6og1-5sB3iyU08iGeumJkz-zQT1GWJ8Q6ddTsud5PBMavPT9RKKJQ5kx9uI0ec70XzTj1MwQJgcSiWHdDwMkZ6p4DAifqjUkhtx7fDk0jpkirZmf-d-MIxXTFlUqZj4SSXRm"/>
+<div class="absolute top-3 left-3 px-2 py-1 rounded bg-surface/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              Seasonal Patisserie
+            </div>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1 bg-surface-container-lowest">
+<h4 class="font-title-lg text-title-lg text-primary">Chilled Berry Tarts</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Almond frangipane shells filled with vanilla crème and edible 24k gold leaf.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Our Promise & Atelier Invitation -->
+<section class="w-full bg-surface-container py-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="relative rounded-2xl bg-surface-container-lowest shadow-lg overflow-hidden p-space-lg lg:p-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Our Unwavering Promise</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+              Every celebration deserves something truly memorable.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              Whether you are marking an intimate anniversary, a child’s first birthday, or simply gathering over Sunday coffee, we bake with the same devotion we would offer our own family. Come celebrate with us.
+            </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-center gap-space-sm">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-8 py-4 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-all duration-200 text-center" data-path="shop" href="#">
+<span>Explore Our Cakes</span>
+<span class="material-symbols-outlined text-[20px]">cake</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-6 py-3 rounded-full bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-surface-container-high transition-colors text-center" data-path="custom-cakes" href="#">
+<span>Book Custom Cake Consultation</span>
+</a>
+</div>
+</div>
+<!-- Atelier Working Hours Card Footer -->
+<div class="mt-space-lg pt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-sm bg-surface-container-low/70 rounded-xl p-space-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">storefront</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Boutique &amp; Café</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">8:00 AM – 10:00 PM Daily</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">oven_gen</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Oven Bake Drops</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">9:00 AM &amp; 4:00 PM</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">contact_support</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Chef Concierge</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Personalized Cake Consults</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface shadow-[0_-4px_24px_rgba(66,37,29,0.08)]"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl lg:gap-gutter pb-space-xl"><div class="flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-highest tracking-tight">Crumble &amp; Co.</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim mt-1">Atelier &amp; Fournil</span></div><p class="font-body-md text-body-md text-outline-variant leading-relaxed max-w-sm">Handcrafted artisan baking with pure cultured butter, heirloom stoneground grains, and unhurried passion. Freshly baked, happier days.</p><div class="flex items-center gap-space-md pt-space-xs"><a aria-label="Instagram" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="WhatsApp Orders" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">chat</span></a><a aria-label="Email Concierge" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a></div></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Quick Links</h3><nav class="flex flex-col gap-space-sm font-body-md text-body-md"><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="home" href="#">Home</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="shop" href="#">Our Bakes</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="custom-cakes" href="#">Custom Cakes</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="celebration-gallery" href="#">Celebration Gallery</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="about-us" href="#">About Us</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="contact" href="#">Contact Us</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="order-tracking" href="#">Order Tracking</a></nav></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Bakery Specialties</h3><ul class="flex flex-col gap-space-sm font-body-md text-body-md text-outline-variant"><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Artisan Sourdough</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Decadent Truffle Cakes</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>French Macarons</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Seasonal Tea Cakes</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Vegan &amp; Eggless Bakes</li></ul></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Bakery Atelier</h3><div class="flex flex-col gap-space-sm font-body-md text-body-md text-outline-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">schedule</span><span>Boutique: 8:00 AM – 10:00 PM Daily</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">bakery_dining</span><span>Fresh Bake Drops: 9:00 AM &amp; 4:00 PM</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">local_shipping</span><span>City-wide refrigerated dispatch</span></div></div><div class="p-space-md rounded-lg bg-tertiary-container/80 text-surface-container-low"><div class="flex items-center gap-space-xs mb-1"><span class="material-symbols-outlined text-[16px] text-secondary-fixed-dim">info</span><span class="font-label-md text-label-md font-semibold text-secondary-fixed-dim">Offline Payments</span></div><p class="font-body-sm text-body-sm text-outline-variant">Orders confirmed via WhatsApp &amp; phone call. No advance card gateway needed.</p></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex flex-wrap items-center justify-center md:justify-start gap-space-md"><a class="hover:text-surface-container transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span>•</span><a class="hover:text-surface-container transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a><span>•</span><span>FSSAI Lic. No. 10022022000541</span></div><p class="text-center md:text-right">© 2025 Crumble &amp; Co. Bakery &amp; Patisserie. All rights reserved.</p></div></div></footer></body></html>

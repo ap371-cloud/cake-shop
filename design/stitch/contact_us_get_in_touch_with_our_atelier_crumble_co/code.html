@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "inverse-on-surface": "#ffede7", "surface": "#fff8f6", "secondary-container": "#fed399", "on-tertiary-fixed-variant": "#51443b", "error-container": "#ffdad6", "on-primary-container": "#f0a38c", "on-secondary": "#ffffff", "background": "#fff8f6", "surface-container": "#ffe9e2", "secondary-fixed-dim": "#e9c087", "on-secondary-fixed-variant": "#5d4214", "surface-container-lowest": "#ffffff", "surface-container-high": "#fbe3db", "on-surface-variant": "#53433f", "tertiary-fixed": "#f2dfd2", "secondary": "#78592a", "primary-fixed-dim": "#ffb59f", "on-tertiary": "#ffffff", "on-tertiary-container": "#c4b3a7", "outline-variant": "#d8c2bc", "outline": "#85736e", "on-primary-fixed-variant": "#6e3726", "tertiary-container": "#51453c", "secondary-fixed": "#ffddb1", "surface-dim": "#ecd5cd", "on-background": "#251914", "inverse-primary": "#ffb59f", "surface-bright": "#fff8f6", "primary-container": "#6f3827", "inverse-surface": "#3b2d28", "on-tertiary-fixed": "#231a12", "surface-variant": "#f5ded6", "primary": "#532213", "primary-fixed": "#ffdbd0", "surface-container-highest": "#f5ded6", "on-secondary-fixed": "#291800", "tertiary-fixed-dim": "#d5c3b7", "surface-container-low": "#fff1ec", "on-primary": "#ffffff", "surface-tint": "#8b4e3c", "on-secondary-container": "#785a2a", "on-error-container": "#93000a", "on-surface": "#251914", "tertiary": "#3a2f26", "on-error": "#ffffff", "on-primary-fixed": "#370d02" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "display-lg-mobile": [ "Playfair Display" ], "title-lg": [ "Playfair Display" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Playfair Display" ], "price-lg": [ "Inter" ], "label-lg": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Playfair Display" ], "price-md": [ "Inter" ], "headline-lg": [ "Playfair Display" ], "display-lg": [ "Playfair Display" ] }, "fontSize": { "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "price-lg": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "26px", { "lineHeight": "34px", "fontWeight": "500" } ], "price-md": [ "16px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-low/95 backdrop-blur-md shadow-[0_4px_16px_-2px_rgba(66,37,29,0.05)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Crumble &amp; Co. Brand Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VEOn43cLK9cNjGFxyqFZPDrQtrFxEpMPeYZzFiKH-9Po7LWAeGv6gTDdWHBSdciDGTDSl9n1xAFRa6U6nXZWoW21x0elPqHLp0umH4mtKF2GK7XPJi9_FU4aUUrbdQi-dMBP1oHD_KZzWckD6cDvAJc4LekIGOlii1LhdOfPNQkYZ2uWF8iL9DzUgqqR4JbJdsJnD8Vyd7Ntr6QkBN1dk8p79c5_Ea_yqchcnYqTSk7g"/><div class="flex flex-col"><span class="font-title-lg text-title-lg tracking-tight text-primary font-semibold leading-none">Crumble &amp; Co.</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-medium mt-1">Bakery &amp; Patisserie</span></div></a></div><nav class="hidden md:flex items-center gap-space-lg lg:gap-space-xl h-full" data-active-classes="text-primary-container font-semibold border-b-2 border-primary-container"><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="home" href="#">Home</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="shop" href="#">Shop</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="custom-cakes" href="#">Custom Cakes</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="about-us" href="#">About Us</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md shrink-0"><button aria-label="Search Bakery Menu" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><a class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] leading-none font-bold flex items-center justify-center shadow-[0_2px_6px_rgba(66,37,29,0.2)]">2</span></a><div class="flex items-center gap-space-xs"><a class="flex items-center focus:outline-none" data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(66,37,29,0.15)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqKtpP221inMGQLNKLYpPqXqrJLAOkVteVc6ZDZtTrk-IUGMmQhABo8WW92lLwUYyzd8vyqnBOyNv3e8t4feJM06mwjQuTw6QGuy3LmpqFrTsitKX845F0ShqN63C9QV_qRlU0AevuzU4xf44t6-ctUCd6Q_kuZiLV3qTkynvgbR40-_Q7n_efqDON1_qGQ9ZM9XVxZyvKAIkMJ6jWBvFQ7bw0IoRb6irJqGmzfouB"/></a></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Atmospheric Background Glow Elements -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 right-1/4 w-96 h-96 rounded-full bg-secondary-container/25 blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 -left-20 w-[420px] h-[420px] rounded-full bg-surface-container-high/40 blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-xl">
+<!-- Section Editorial Header -->
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto space-y-space-sm mb-space-xl">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="w-6 h-px bg-secondary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Atelier Concierge</span>
+<span class="w-6 h-px bg-secondary-fixed-dim"></span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">
+          We’d Love to Hear From You
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Questions about our bakes, custom celebration orders, or just a sweet hello? Reach out to our atelier team.
+        </p>
+</div>
+<!-- Quick Contact Channel Cards (4 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl">
+<!-- Phone Concierge -->
+<div class="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold tracking-wider block mb-1">Direct Dial</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-semibold leading-snug">Phone Concierge</h3>
+<p class="font-body-md text-body-md text-on-surface-variant font-medium text-primary">
+                +91 (0734) 251-0988
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>10:00 AM – 10:00 PM daily</span>
+</div>
+</div>
+<!-- WhatsApp Bakery Chat -->
+<div class="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold tracking-wider block mb-1">Instant Messaging</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-semibold leading-snug">Bakery WhatsApp</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Instant chat with our head patissier for customization and tasting queries.
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs w-full py-2.5 px-4 rounded-full bg-surface-container-high hover:bg-secondary-container text-on-surface font-label-md text-label-md transition-colors font-medium" href="https://wa.me/9107342510988" rel="noopener noreferrer" target="_blank">
+<span>Message on WhatsApp</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Atelier Email -->
+<div class="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">mark_email_read</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold tracking-wider block mb-1">Written Desk</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-semibold leading-snug">Atelier Email</h3>
+<a class="font-body-md text-body-md text-primary font-medium hover:underline break-all" href="mailto:concierge@crumbleandco.com">
+                concierge@crumbleandco.com
+              </a>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span>Responses within 2 hours</span>
+</div>
+</div>
+<!-- Boutique Location -->
+<div class="group bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold tracking-wider block mb-1">Flagship Counter</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs font-semibold leading-snug">Boutique Location</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Mahakal Van Marg, Freeganj, Ujjain, MP
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">directions_car</span>
+<span>Valet parking available</span>
+</div>
+</div>
+</div>
+<!-- Two-Column Interactive Contact & Visit Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-xl items-start">
+<!-- Left Column: Clean High-end Contact Form (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm relative overflow-hidden">
+<div class="mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Drop an Inquiry</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1 mb-2">Send an Atelier Note</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Fill out the details below and our patisserie team will reach out with customized cake specifications, pricing, and timelines.
+            </p>
+</div>
+<form class="space-y-space-md" id="patisserie-contact-form" onsubmit="event.preventDefault(); document.getElementById('form-success-banner').classList.remove('hidden'); this.reset();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="fullName">
+<span>Full Name</span>
+<span class="text-error font-body-sm">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="fullName" placeholder="Élise Moreau" required="" type="text"/>
+</div>
+</div>
+<!-- Email Address -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="emailAddress">
+<span>Email Address</span>
+<span class="text-error font-body-sm">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="emailAddress" placeholder="elise@atelier.com" required="" type="email"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Phone Number -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="phoneNumber">
+<span>Phone Number</span>
+<span class="text-error font-body-sm">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="phoneNumber" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+</div>
+<!-- Subject Dropdown -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="subjectSelect">
+                  Inquiry Nature
+                </label>
+<div class="relative">
+<select class="w-full h-12 px-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:bg-surface-container-lowest focus:outline-none transition-all cursor-pointer shadow-inner pr-10" id="subjectSelect">
+<option value="general">General Inquiry</option>
+<option selected="" value="custom-cake">Custom Cake Consultation</option>
+<option value="corporate">Bulk / Corporate Gifting</option>
+<option value="delivery">Delivery Feedback</option>
+<option value="other">Other Inquiries</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 pointer-events-none text-on-surface-variant text-[20px]">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+<!-- Message Textarea -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="messageText">
+<span>Message &amp; Event Details</span>
+<span class="font-label-sm text-label-sm text-outline">Optional flavor/tier hints</span>
+</label>
+<textarea class="w-full p-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none transition-all resize-y shadow-inner" id="messageText" placeholder="Tell us about your event, preferred flavors, or questions..." rows="4"></textarea>
+</div>
+<!-- Submit Action & State Indicator -->
+<div class="pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<button class="inline-flex items-center justify-center gap-space-xs px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary-container active:scale-[0.98] transition-all duration-200 shadow-sm" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span>Pastry chefs respond within 2 business hours</span>
+</div>
+</div>
+<!-- Submission Success Confirmation Note -->
+<div class="hidden mt-space-md p-space-md rounded-lg bg-surface-container text-on-surface flex items-start gap-space-sm animate-fade-in" id="form-success-banner">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+<div class="text-body-sm font-body-sm">
+<strong class="font-semibold text-primary block">Thank you for your note!</strong>
+                Our team at the Freeganj Atelier has received your dispatch and will respond promptly.
+              </div>
+</div>
+</form>
+</div>
+<!-- Right Column: Schedule, Live Map & Help Center (5 cols) -->
+<div class="lg:col-span-5 flex flex-col space-y-space-lg">
+<!-- Atelier Hours & Dispatch Schedule Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-md text-primary">
+<span class="material-symbols-outlined text-[24px]">search_off</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold">Atelier &amp; Dispatch Rhythm</h3>
+</div>
+<div class="space-y-space-md">
+<!-- Monday to Sunday -->
+<div class="flex items-start gap-space-sm pb-space-sm bg-surface-container-low/50 p-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">store</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Monday to Sunday</div>
+<div class="font-body-md text-body-md text-on-surface-variant font-medium">8:00 AM – 10:00 PM</div>
+<div class="font-body-sm text-body-sm text-outline">Open for walk-ins, tastings &amp; espresso counter</div>
+</div>
+</div>
+<!-- Fresh Bake Drops -->
+<div class="flex items-start gap-space-sm pb-space-sm bg-surface-container-low/50 p-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">bakery_dining</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Fresh Oven Drops</div>
+<div class="font-body-md text-body-md text-primary font-medium">9:00 AM &amp; 4:00 PM Daily</div>
+<div class="font-body-sm text-body-sm text-outline">Warm sourdough loaves, cruffins &amp; brioche</div>
+</div>
+</div>
+<!-- Refrigerated Dispatch -->
+<div class="flex items-start gap-space-sm bg-surface-container-low/50 p-space-sm rounded-lg">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Refrigerated City Delivery</div>
+<div class="font-body-md text-body-md text-on-surface-variant font-medium">11:00 AM – 9:00 PM</div>
+<div class="font-body-sm text-body-sm text-outline">Temperature-controlled multi-tier cake transit</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Location & Interactive Map Frame -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[22px]">pin_drop</span>
+<span class="font-title-lg text-title-lg font-semibold">Freeganj Atelier</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5" href="https://maps.google.com/?q=Freeganj+Ujjain" rel="noopener noreferrer" target="_blank">
+<span>Get Driving Directions</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+<!-- Styled Map Placement -->
+<div class="w-full h-48 bg-cover bg-center rounded-lg relative overflow-hidden flex items-end p-space-sm shadow-inner group" data-location="Mahakal Van Marg, Freeganj, Ujjain, Madhya Pradesh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOQk6wf4_tib4fqlXv2aCQOs9woRgmC3YWzkc_-3oaatBHeppjd8NaSGmRxtFKwcKJqsKaV0ItyztE7vFvUKCHeI2ru_gruB6uS7OtzIHv20J1DSLFNXrPFQHJqfo03ebCB8kkDazVIGu8W-BtuASqDGc9ivcgv_2FLzpLXz_R6KvBgdr4pJqB5l8VI-2ZkUqB4-T1x_TcPMt4Cn7mrEKLPRao39qbTxsielxWZhDd')">
+<div class="absolute inset-0 bg-primary/10 backdrop-brightness-95 group-hover:bg-primary/5 transition-colors"></div>
+<!-- Floating Location Pin Badge -->
+<div class="relative z-10 bg-surface-container-lowest/95 backdrop-blur-sm px-3 py-2 rounded-lg shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">cake</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Crumble &amp; Co. Patisserie</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant leading-tight">Opposite Circuit House, Freeganj</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Quick Link Banner -->
+<a class="group bg-surface-container-high hover:bg-secondary-container/60 p-space-md rounded-xl transition-all duration-300 flex items-center justify-between shadow-sm" data-path="faq" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface group-hover:text-primary transition-colors">Have quick questions?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Eggless options, shelf life, or radius →</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Tactile Sensory Gallery Banner -->
+<div class="mt-space-xl pt-space-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="relative h-44 rounded-xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up shot of golden-brown croissants with crisp flaky layers resting on a white marble countertop in warm morning bakery light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnQX-wM0wWQJoJ48g5ko4fyVRLTR_oIDdC8XDsSFk3OACmynKaN66Y54jR8_uFwKWqBIpyd9OlSbIu7cSJXdQt11x_xAQZWRx8Mtb-FSmuMKlveq6F2SijhjUutn1E1fjlrGW_ryjKpUTXhkp88mNhQPzQ-MNLcHIbRaGD_GmV5khM0S24FvPXqdTF77pQiWjIUyptpx8yGGgFKFtuDMttelr1iPBpwsa7pMVrm9xy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 text-surface-container-lowest font-label-sm text-label-sm font-semibold">Morning Viennoiserie</span>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal custom tier celebration cake decorated with edible pressed flowers and velvety chocolate buttercream in soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9lRCegv_Nu--P3y5QgCzb4qA4vb4f988Pd-Pd6kVoy6D-9bAdwqT3Wqj-_SobdxxBbiboqL9mXeft7gkxodWo1XPJ6qa5VRosQkxSWf2RlGsKc0hdFKjCq6-mfft__7WCgwuUdvZ0D8AcNSPAOn3O5v8HFyQ7y83doStaYfi9cX6vWwCcigmy5VDe4dykHZlw0TBboboMe3hzdGcnrjk7_PoVtD5cy7t-mFrJo7rC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 text-surface-container-lowest font-label-sm text-label-sm font-semibold">Bespoke Celebrations</span>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Head patissier carefully piping delicate chocolate ganache onto French macarons in an open luxury bakery atelier." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBExFrtcw3wFOU-qE3HAY4JnWaLRrksfv01juLSMZusfkpBXEamOflsD8JytjpEAclhXRVVcQmKsMEBg1_E6E3ZKUwmJY2JXEYWyXP3UeMJ3Q_mPkwtpE2_U463CgVR9ANYVks7AvKlUXiyyCBtqAezPy9M2x-0Hh5TIxagPb3-byM3d42RfGUXsxHCxhYe9Wz9-swivmAbCO-V4DSeIv08F_FIGkm4skMbEHXp0Prz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 text-surface-container-lowest font-label-sm text-label-sm font-semibold">Artisan Handcraft</span>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cozy sunlit interior of Crumble and Co boutique patisserie with marble display cases and warm brass accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhWAZVJxcgXWRJQPyb0bgWoYRaDjb_eHQjEkVuTAqcN0yFeaACm3Cp4LHUGUeYEF6ijQcLIPVLGJ87ENR9Evqz9pS2x26JJwPhIbvAKctZJ-1GOnlAPoSgngdwFXG_ETnXa7xRqo0alUoDdGmqnUptPBtQx-w14dyLyni9fs24axdjsoE1G_CbAczpTPEKJOV7ldiQSawJu7OvhzvQ-76kjpT-_M2W-2M2GMxTVrbh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 text-surface-container-lowest font-label-sm text-label-sm font-semibold">Freeganj Boutique</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface shadow-[0_-4px_24px_rgba(66,37,29,0.08)]"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl lg:gap-gutter pb-space-xl"><div class="flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-highest tracking-tight">Crumble &amp; Co.</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim mt-1">Atelier &amp; Fournil</span></div><p class="font-body-md text-body-md text-outline-variant leading-relaxed max-w-sm">Handcrafted artisan baking with pure cultured butter, heirloom stoneground grains, and unhurried passion. Freshly baked, happier days.</p><div class="flex items-center gap-space-md pt-space-xs"><a aria-label="Instagram" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="WhatsApp Orders" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">chat</span></a><a aria-label="Email Concierge" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a></div></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Quick Links</h3><nav class="flex flex-col gap-space-sm font-body-md text-body-md"><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="home" href="#">Home</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="shop" href="#">Our Bakes</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="custom-cakes" href="#">Custom Cakes</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="celebration-gallery" href="#">Celebration Gallery</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="about-us" href="#">About Us</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="contact" href="#">Contact Us</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="order-tracking" href="#">Order Tracking</a></nav></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Bakery Specialties</h3><ul class="flex flex-col gap-space-sm font-body-md text-body-md text-outline-variant"><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Artisan Sourdough</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Decadent Truffle Cakes</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>French Macarons</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Seasonal Tea Cakes</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Vegan &amp; Eggless Bakes</li></ul></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Bakery Atelier</h3><div class="flex flex-col gap-space-sm font-body-md text-body-md text-outline-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">schedule</span><span>Boutique: 8:00 AM – 10:00 PM Daily</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">bakery_dining</span><span>Fresh Bake Drops: 9:00 AM &amp; 4:00 PM</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">local_shipping</span><span>City-wide refrigerated dispatch</span></div></div><div class="p-space-md rounded-lg bg-tertiary-container/80 text-surface-container-low"><div class="flex items-center gap-space-xs mb-1"><span class="material-symbols-outlined text-[16px] text-secondary-fixed-dim">info</span><span class="font-label-md text-label-md font-semibold text-secondary-fixed-dim">Offline Payments</span></div><p class="font-body-sm text-body-sm text-outline-variant">Orders confirmed via WhatsApp &amp; phone call. No advance card gateway needed.</p></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex flex-wrap items-center justify-center md:justify-start gap-space-md"><a class="hover:text-surface-container transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span>•</span><a class="hover:text-surface-container transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a><span>•</span><span>FSSAI Lic. No. 10022022000541</span></div><p class="text-center md:text-right">© 2025 Crumble &amp; Co. Bakery &amp; Patisserie. All rights reserved.</p></div></div></footer></body></html>

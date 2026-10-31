@@ -53,21 +53,34 @@ export async function getOrderByNumber(orderNumber: string, phone?: string): Pro
   }
 }
 
-export async function createOrder(
-  payload: Omit<
-    Order,
-    | "id"
-    | "orderNumber"
-    | "status"
-    | "statusHistory"
-    | "createdAt"
-    | "updatedAt"
-    | "subtotal"
-    | "deliveryFee"
-    | "total"
-    | "user_id"
-  > & { user_id?: string }
-): Promise<Order> {
+// Mirrors the payload /api/orders accepts. Totals, prices and the order number
+// are decided on the server, so they are not part of this shape.
+export type CreateOrderPayload = {
+  customerName: string;
+  phone: string;
+  email?: string;
+  addressLine1: string;
+  addressLine2?: string;
+  landmark?: string;
+  city: string;
+  state: string;
+  pinCode: string;
+  deliveryMethod: "delivery" | "pickup";
+  deliveryDate: string;
+  deliverySlot: string;
+  deliveryNotes?: string;
+  paymentMethod: "cash_on_delivery" | "upi_on_delivery";
+  items: {
+    name: string;
+    price: number;
+    quantity: number;
+    slug?: string;
+    variant?: string;
+    variantId?: string;
+  }[];
+};
+
+export async function createOrder(payload: CreateOrderPayload): Promise<Order> {
   return api<Order>("/api/orders", { method: "POST", ...json(payload) });
 }
 

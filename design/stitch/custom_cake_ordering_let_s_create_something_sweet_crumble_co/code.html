@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "inverse-on-surface": "#ffede7", "surface": "#fff8f6", "secondary-container": "#fed399", "on-tertiary-fixed-variant": "#51443b", "error-container": "#ffdad6", "on-primary-container": "#f0a38c", "on-secondary": "#ffffff", "background": "#fff8f6", "surface-container": "#ffe9e2", "secondary-fixed-dim": "#e9c087", "on-secondary-fixed-variant": "#5d4214", "surface-container-lowest": "#ffffff", "surface-container-high": "#fbe3db", "on-surface-variant": "#53433f", "tertiary-fixed": "#f2dfd2", "secondary": "#78592a", "primary-fixed-dim": "#ffb59f", "on-tertiary": "#ffffff", "on-tertiary-container": "#c4b3a7", "outline-variant": "#d8c2bc", "outline": "#85736e", "on-primary-fixed-variant": "#6e3726", "tertiary-container": "#51453c", "secondary-fixed": "#ffddb1", "surface-dim": "#ecd5cd", "on-background": "#251914", "inverse-primary": "#ffb59f", "surface-bright": "#fff8f6", "primary-container": "#6f3827", "inverse-surface": "#3b2d28", "on-tertiary-fixed": "#231a12", "surface-variant": "#f5ded6", "primary": "#532213", "primary-fixed": "#ffdbd0", "surface-container-highest": "#f5ded6", "on-secondary-fixed": "#291800", "tertiary-fixed-dim": "#d5c3b7", "surface-container-low": "#fff1ec", "on-primary": "#ffffff", "surface-tint": "#8b4e3c", "on-secondary-container": "#785a2a", "on-error-container": "#93000a", "on-surface": "#251914", "tertiary": "#3a2f26", "on-error": "#ffffff", "on-primary-fixed": "#370d02" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "display-lg-mobile": [ "Playfair Display" ], "title-lg": [ "Playfair Display" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Playfair Display" ], "price-lg": [ "Inter" ], "label-lg": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Playfair Display" ], "price-md": [ "Inter" ], "headline-lg": [ "Playfair Display" ], "display-lg": [ "Playfair Display" ] }, "fontSize": { "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "price-lg": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "26px", { "lineHeight": "34px", "fontWeight": "500" } ], "price-md": [ "16px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-low/95 backdrop-blur-md shadow-[0_4px_16px_-2px_rgba(66,37,29,0.05)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="Crumble &amp; Co. Brand Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VEOn43cLK9cNjGFxyqFZPDrQtrFxEpMPeYZzFiKH-9Po7LWAeGv6gTDdWHBSdciDGTDSl9n1xAFRa6U6nXZWoW21x0elPqHLp0umH4mtKF2GK7XPJi9_FU4aUUrbdQi-dMBP1oHD_KZzWckD6cDvAJc4LekIGOlii1LhdOfPNQkYZ2uWF8iL9DzUgqqR4JbJdsJnD8Vyd7Ntr6QkBN1dk8p79c5_Ea_yqchcnYqTSk7g"/><div class="flex flex-col"><span class="font-title-lg text-title-lg tracking-tight text-primary font-semibold leading-none">Crumble &amp; Co.</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-medium mt-1">Bakery &amp; Patisserie</span></div></a></div><nav class="hidden md:flex items-center gap-space-lg lg:gap-space-xl h-full" data-active-classes="text-primary-container font-semibold border-b-2 border-primary-container"><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="home" href="#">Home</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="shop" href="#">Shop</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="custom-cakes" href="#">Custom Cakes</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="about-us" href="#">About Us</a><a class="h-full inline-flex items-center text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors border-b-2 border-transparent" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md shrink-0"><button aria-label="Search Bakery Menu" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><a class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] leading-none font-bold flex items-center justify-center shadow-[0_2px_6px_rgba(66,37,29,0.2)]">2</span></a><div class="flex items-center gap-space-xs"><a class="flex items-center focus:outline-none" data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(66,37,29,0.15)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqKtpP221inMGQLNKLYpPqXqrJLAOkVteVc6ZDZtTrk-IUGMmQhABo8WW92lLwUYyzd8vyqnBOyNv3e8t4feJM06mwjQuTw6QGuy3LmpqFrTsitKX845F0ShqN63C9QV_qRlU0AevuzU4xf44t6-ctUCd6Q_kuZiLV3qTkynvgbR40-_Q7n_efqDON1_qGQ9ZM9XVxZyvKAIkMJ6jWBvFQ7bw0IoRb6irJqGmzfouB"/></a></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Ambient Bar -->
+<section class="w-full bg-surface-container-low py-space-sm">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-outline-variant font-mono text-[10px]">/</span>
+<a class="hover:text-primary transition-colors" href="#">Custom Cakes</a>
+<span class="text-outline-variant font-mono text-[10px]">/</span>
+<span class="text-primary font-semibold">Atelier Request</span>
+</nav>
+<div class="hidden md:flex items-center gap-space-sm font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Atelier Diary: Booking slots open for next 60 days</span>
+</div>
+</div>
+</section>
+<!-- Hero Banner: Editorial Patisserie Grandeur -->
+<section class="w-full bg-gradient-to-b from-surface-container-low via-surface to-background pt-space-lg pb-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-gutter items-center">
+<!-- Text Pillar -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold bg-secondary-fixed/50 px-3 py-1 rounded-full">Haute Pâtisserie Atelier</span>
+<span class="h-px w-8 bg-secondary-fixed-dim"></span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight leading-[1.08]">
+            Let's Create <br class="hidden sm:inline"/>
+<span class="italic font-normal font-serif text-secondary">Something Sweet.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Your dream cake, designed especially for your special moments. From multi-tiered botanical centerpieces to bespoke vintage pipework, every creation is hand-sculpted using pure cultured churned butter and heirloom single-origin chocolate.
+          </p>
+<!-- Atelier Badges Row -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs text-on-tertiary-fixed-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5 bg-surface-container px-3 py-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>Bespoke Atelier Orders</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-3 py-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">person_pin</span>
+<span>1-on-1 Baker Consultation</span>
+</div>
+<div class="flex items-center gap-1.5 bg-secondary-fixed/60 px-3 py-2 rounded-full shadow-sm text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">cake</span>
+<span>Complimentary Tasting Box for Tiered Cakes</span>
+</div>
+</div>
+</div>
+<!-- Visual Mosaic Pillar -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Luxurious multi-tier bespoke wedding celebration cake displayed in sunlit Parisian-style patisserie atelier. Delicate hand-piped Swiss buttercream, ivory sugar florals, trailing chamomile, warm chocolate velvet ribbon trim, marble countertop background with soft golden bakery light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtPzUVGa8uYnwTDNLheN0Lb0ic3GaoJrxXGyNfUiYI4EvtjCNjtYKoNm5cohBPDgkhiTogWIxQooPXsvvZA2vK8HwGLE3PbrKHv-m1a5MUTY5F-7IvbldN3SiLXGEgApG597DiNRYrTevIazh4po1mU6yix8k9iCoKD6bnSRCPeV9-HRop6yKxAWBIrbpZTwKIfbRemoCw6cPTALCjFHKSKh6DJNv8pZY-azQILsZS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary flex items-center justify-between">
+<div>
+<p class="font-headline-sm text-headline-sm text-surface leading-tight">Maison Signature Tier</p>
+<p class="font-label-sm text-label-sm text-secondary-fixed tracking-wide">Handcrafted in Bandra atelier</p>
+</div>
+<span class="px-3 py-1 bg-surface/90 backdrop-blur text-primary font-price-md text-price-md rounded-full font-semibold shadow-sm">From ₹2,400</span>
+</div>
+</div>
+<!-- Decorative accent badge -->
+<div class="absolute -top-3 -right-3 hidden sm:flex items-center gap-2 bg-primary-container text-on-primary px-3 py-2 rounded-xl shadow-lg">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm font-medium">FSSAI Certified Fresh</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Form & Consultation Section -->
+<section class="w-full py-space-xl bg-background">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Bespoke Commission Intake</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Design Your Custom Creation</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Please provide as much detail as possible. Once reviewed, Chef Patissier will connect to finalize the flavor profiles, weight ratio, and aesthetic sketches.
+        </p>
+</div>
+<!-- Main Two-Column Card Form -->
+<form class="flex flex-col gap-space-lg" id="cakeOrderForm" onsubmit="event.preventDefault(); document.getElementById('confirmationSuccess').classList.remove('hidden');">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Customer & Event Details -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-md sm:p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary font-body-sm text-body-sm">01</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Customer &amp; Event Details</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Who is celebrating and when?</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2.5 py-1 rounded-full">Step 1 of 2</span>
+</div>
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="fullName">
+<span>Full Name <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-outline font-normal">Contact Person</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="fullName" placeholder="e.g. Alisha Kapoor" required="" type="text"/>
+</div>
+</div>
+<!-- Phone & Email Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Phone -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="phone">
+                  Phone Number <span class="text-error">*</span>
+</label>
+<div class="flex h-12 rounded-xl bg-surface-container-low overflow-hidden focus-within:shadow-[0_0_0_2px_#6f3827] focus-within:bg-surface-container-lowest transition-all">
+<div class="px-3 flex items-center gap-1 bg-surface-container text-on-surface-variant font-label-md text-label-md font-semibold select-none">
+<span>🇮🇳</span>
+<span>+91</span>
+</div>
+<input class="w-full px-3 bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" id="phone" pattern="[0-9]{10}" placeholder="98765 43210" required="" type="tel"/>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="email">
+<span>Email Address</span>
+<span class="font-label-sm text-label-sm text-outline font-normal">Optional</span>
+</label>
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="email" placeholder="alisha@example.com" type="email"/>
+</div>
+</div>
+<!-- Occasion Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="occasion">
+                Occasion Type <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="occasion" required="">
+<option disabled="" selected="" value="">Select an auspicious celebration</option>
+<option value="birthday">Birthday Milestone</option>
+<option value="wedding">Grand Wedding Celebration</option>
+<option value="anniversary">Anniversary</option>
+<option value="baby-shower">Baby Shower / Gender Reveal</option>
+<option value="graduation">Graduation / Achievement</option>
+<option value="corporate">Corporate Gala / Launch</option>
+<option value="other">Other Special Gathering</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-4 top-3.5 text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Preferred Date & Time Slots -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="eventDate">
+                  Preferred Date <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="eventDate" required="" type="date"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                  Time Slot <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="timeSlot" required="">
+<option value="morning">Morning (10:00 AM – 1:00 PM)</option>
+<option value="afternoon">Afternoon (2:00 PM – 5:00 PM)</option>
+<option selected="" value="evening">Evening (6:00 PM – 9:00 PM)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-4 top-3.5 text-on-surface-variant text-[20px]">schedule</span>
+</div>
+</div>
+</div>
+<!-- Fulfillment Toggle -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Fulfilment Method</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Delivery Button Option (Selected) -->
+<label class="cursor-pointer relative p-3.5 rounded-xl bg-primary text-on-primary flex items-start gap-3 transition-all shadow-sm">
+<input checked="" class="mt-1 accent-secondary" name="fulfillment" type="radio" value="delivery"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Refrigerated Doorstep Delivery</span>
+<span class="font-body-sm text-body-sm text-surface-container-highest mt-0.5">Specialized temperature-controlled van</span>
+</div>
+</label>
+<!-- Pickup Button Option -->
+<label class="cursor-pointer relative p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface flex items-start gap-3 transition-all">
+<input class="mt-1 accent-primary" name="fulfillment" type="radio" value="pickup"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold leading-tight">Studio Pickup</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Collect from Bandra West Atelier</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Delivery Address Hint if Delivery is selected -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary shrink-0">local_shipping</span>
+<span>Exact delivery street address will be validated along with pin code during the confirmation call.</span>
+</div>
+</div>
+<!-- RIGHT COLUMN: Cake Design Specifications -->
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-md sm:p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary font-body-sm text-body-sm">02</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Cake Design Specifications</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Flavors, tiers, dietary, and visual nuances</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2.5 py-1 rounded-full">Step 2 of 2</span>
+</div>
+<!-- Flavor Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="cakeFlavour">
+                Signature Flavour Pairing <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="cakeFlavour" required="">
+<option selected="" value="chocolate-truffle">Belgian Dark Chocolate Truffle with Ganache</option>
+<option value="vanilla-berry">Madagascar Vanilla Bean &amp; Summer Berry Compote</option>
+<option value="red-velvet">Red Velvet with Whipped Philadelphia Cream Cheese</option>
+<option value="butterscotch-praline">Roasted Hazelnut &amp; Butterscotch Praline</option>
+<option value="black-forest">Classic Black Forest with Amarena Cherries</option>
+<option value="custom">Custom Flavour Request (Specify in notes below)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-4 top-3.5 text-on-surface-variant text-[20px]">local_cafe</span>
+</div>
+</div>
+<!-- Cake Size & Servings Grid -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                  Cake Size &amp; Servings <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Weight is approximate</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<!-- Option 1 -->
+<label class="cursor-pointer flex flex-col p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-all">
+<input class="sr-only peer" name="cakeSize" type="radio" value="0.5kg"/>
+<span class="peer-checked:font-bold peer-checked:text-primary font-label-md text-label-md">0.5 kg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">4–6 Guests</span>
+</label>
+<!-- Option 2 (Selected) -->
+<label class="cursor-pointer flex flex-col p-2.5 rounded-xl bg-primary text-on-primary text-center transition-all shadow-sm">
+<input checked="" class="sr-only peer" name="cakeSize" type="radio" value="1kg"/>
+<span class="font-label-md text-label-md font-bold">1.0 kg</span>
+<span class="font-body-sm text-body-sm text-surface-container-highest text-[11px]">8–10 Guests</span>
+</label>
+<!-- Option 3 -->
+<label class="cursor-pointer flex flex-col p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-all">
+<input class="sr-only peer" name="cakeSize" type="radio" value="2kg"/>
+<span class="peer-checked:font-bold peer-checked:text-primary font-label-md text-label-md">2.0 kg Tiered</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">16–20 Guests</span>
+</label>
+<!-- Option 4 -->
+<label class="cursor-pointer flex flex-col p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-all">
+<input class="sr-only peer" name="cakeSize" type="radio" value="3kg+"/>
+<span class="peer-checked:font-bold peer-checked:text-primary font-label-md text-label-md">3+ kg Grand</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">25+ Guests</span>
+</label>
+</div>
+</div>
+<!-- Dietary Choice & Aesthetic Theme in 2 Columns -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Dietary choice -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dietary Preference <span class="text-error">*</span></span>
+<div class="flex gap-2">
+<label class="flex-1 cursor-pointer flex items-center justify-center gap-2 p-2.5 rounded-xl bg-surface-container text-primary font-label-md text-label-md font-semibold transition-all">
+<input checked="" class="accent-primary" name="dietary" type="radio" value="eggless"/>
+<span>100% Eggless</span>
+</label>
+<label class="flex-1 cursor-pointer flex items-center justify-center gap-2 p-2.5 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md transition-all">
+<input class="accent-primary" name="dietary" type="radio" value="withegg"/>
+<span>With Egg</span>
+</label>
+</div>
+</div>
+<!-- Preferred Aesthetic -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="theme">Preferred Aesthetic <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="theme" required="">
+<option value="vintage">Vintage Lambeth Piping</option>
+<option value="rustic">Rustic Semi-Naked Floral</option>
+<option selected="" value="modern">Modern Minimalist &amp; Gold Leaf</option>
+<option value="cartoon">Whimsical / Kids Theme</option>
+<option value="geometric">Architectural Textured Ganache</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-on-surface-variant text-[18px]">palette</span>
+</div>
+</div>
+</div>
+<!-- Message on Cake -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="cakeMessage">
+<span>Piped Message on Cake / Board</span>
+<span class="font-label-sm text-label-sm text-outline">Max 35 Characters</span>
+</label>
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all" id="cakeMessage" maxlength="35" placeholder="e.g. Happy 30th Birthday Aria!" type="text"/>
+</div>
+<!-- Reference Image Upload UI Box -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Reference Moodboard / Sketch</span>
+<span class="font-label-sm text-label-sm text-secondary">PNG, JPG, HEIC up to 10MB</span>
+</label>
+<div class="relative rounded-2xl bg-surface-container-low/70 p-4 flex flex-col sm:flex-row items-center gap-4 transition-all hover:bg-surface-container-low">
+<!-- Dropzone trigger -->
+<div class="w-full sm:flex-1 flex flex-col items-center justify-center p-4 text-center cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[22px]">cloud_upload</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Drag &amp; drop your Pinterest screenshot</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">or tap to browse device library</p>
+<input accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+<!-- Sample Preview Thumbnail of uploaded floral inspiration -->
+<div class="w-full sm:w-auto flex items-center gap-3 bg-surface-container-lowest p-2.5 rounded-xl shadow-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up thumbnail preview of an uploaded pastel floral tiered celebration cake with delicate edible pressed blossoms and pale pink buttercream swirls, ready as artisan baker design reference." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbPjIXzj2SPRVwJYdIXlAprIFUGlSW_z9TAOcCoBcT_63Uv4BrEtGyzwE_dGMIZgvzm902rFDhqxWjLzEJ65Uw_oMCgYG1jx6lyAlV6Ya-_fRi8aufgVUr9nh7oOSLQhBo72AQBuYaYnyC-UcNjx9xqF9Bizzpx8Vpgfi66XAKsWo_f51jIGSi1IDLtJ_TF8TU6Xk8xXVrxvhVFfhUQCL3zbQVQ3Q5OyyAbEeRHjPa"/>
+</div>
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface truncate">meadow_ref_02.jpg</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">2.4 MB • Uploaded</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Ready
+                    </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Special Instructions & Allergies -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="notes">
+<span>Special Instructions &amp; Allergies</span>
+<span class="font-label-sm text-label-sm text-outline">Nut allergies, color palette notes, etc.</span>
+</label>
+<textarea class="w-full p-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#6f3827] transition-all resize-none" id="notes" placeholder="Mention any food allergies (e.g. nut-free facility check), specific color palette HEX/hues, or personalized delivery surprise notes..." rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- 3. SUBMISSION & POLICY SECTION -->
+<div class="bg-surface-container-lowest p-space-md sm:p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<!-- Important Notice Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 flex items-start gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-[24px] text-primary shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg text-primary font-semibold">No Online Payment Required Now</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                Custom orders require bakery review and approval. Our master baker will call/WhatsApp you within 2 hours to confirm pricing, flavor nuances, and slot availability before payment link dispatch.
+              </p>
+</div>
+</div>
+<!-- Required Confirmation Checkbox -->
+<label class="flex items-start gap-3 cursor-pointer py-1 select-none">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" required="" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface font-medium">
+              I understand that custom cake orders require confirmation from the bakery, and pricing may adapt based on tier stability, sugar flora intricacy, or delivery radius.
+            </span>
+</label>
+<!-- Buttons & Secondary Consultation Link -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs">
+<button class="h-14 px-8 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold tracking-wide transition-all shadow-md flex items-center justify-center gap-2" type="submit">
+<span>Submit Bespoke Cake Request</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- WhatsApp helper link -->
+<a class="h-14 px-6 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2" href="https://wa.me/919876543210" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-secondary">chat</span>
+<span>Need immediate consultation? Chat on WhatsApp with Head Baker</span>
+</a>
+</div>
+<!-- Dynamic Success confirmation container (initially hidden) -->
+<div class="hidden p-space-md bg-secondary-fixed/40 rounded-xl flex items-center gap-space-sm text-on-secondary-fixed-variant animate-fadeIn" id="confirmationSuccess">
+<span class="material-symbols-outlined text-[26px] text-secondary">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold">Bespoke Request Logged!</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Our Chef Patissier is reviewing your moodboard and will connect via WhatsApp in less than 2 hours.</p>
+</div>
+</div>
+</div>
+</form>
+</div>
+</section>
+<!-- 4. INSPIRATION GALLERY SECTION -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<!-- Gallery Title Block -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Atelier Portfolio</span>
+<h2 class="font-display-lg text-display-lg text-primary tracking-tight mt-1">Custom Cake Gallery &amp; Inspiration</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Recent bespoke bakes handcrafted in our atelier</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-secondary font-semibold">4 Artisanal Highlights</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-outline">Bandra Fournil</span>
+</div>
+</div>
+<!-- 4-Card Editorial Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Cake Card 1: Pastel Meadow -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Two tier celebration cake covered in velvety cream buttercream, adorned with delicate piped pastel lavender and sage meadow wildflowers, soft morning daylight, patisserie styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm0cCFvWlYc7FfvGHXVmHCJYrMHWxT9c_hHSEWt69pDNsQOqtnCzc7EmpoGHMe4tyRNiw5sktmoMcJjI-r38HIn6avTpJAa3uipwpuG2vaSp82vrT5lBda7p6V2fbY5Lr7MltBc5XwOKia2WJYDCiqEKIzn3pmkbgdS8E0LW83965c1CUmRNb2FAoIkV1-6iliAmykxmOop2kNWOq1DRoKnoQbNGBJQSNXZjeNrL1f"/>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">2-Tier Floral</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold group-hover:text-secondary transition-colors">Pastel Meadow 2-Tier Cake</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Lavender floral piped buttercream with wild chamomile accents and vanilla bean crumb.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 font-label-md text-label-md">
+<span class="text-secondary font-semibold">Est. 2.0 kg</span>
+<span class="text-primary font-bold">From ₹4,200</span>
+</div>
+</div>
+</div>
+<!-- Cake Card 2: Vintage Lambeth -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Exquisite vintage Lambeth royal icing piped birthday cake in soft blush and ivory cream, layered ruffle swags, maraschino cherries on top, moody editorial patisserie spotlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAsPOdCXC1tecjHtocliwWozyrqpK5D_Fhg6WDnmpRN-S3EjeB-ewItd9_ATPbHUl7zTOAPT0Bo4YX9z4x-fiUGBe1TCxWnIJFke0biP2aReQp5qstleldpaMBTLtO6p2ov8qS5jXtEusmt-oiTyf5phvQxdm6v7eP8C4Sa9WlwXo8XpHOkKZS3H0zMYhyaCLiEEn_p6WKkaCUcbIgsLhn6xqZqeCk1pmGdMLC6f37"/>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Victorian Lambeth</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold group-hover:text-secondary transition-colors">Vintage Lambeth Royal Icing Cake</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Intricate retro Victorian piping, layered ruffled borders with Maraschino glaze.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 font-label-md text-label-md">
+<span class="text-secondary font-semibold">Est. 1.2 kg</span>
+<span class="text-primary font-bold">From ₹2,800</span>
+</div>
+</div>
+</div>
+<!-- Cake Card 3: Minimalist Gold-Leaf -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sophisticated modern minimalist wedding cake coated in pristine ivory white chocolate ganache, draped with genuine 24 karat edible gold leaf foil, crisp sharp edges, warm luxury setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbfUg1wEI4RLOAoUJCjf8xJ69CHeKabEnM-AMBQPx6eI533D04PMq8lVPcJhLqNg9VxgiZ8K7aJ9q3hVLHKC3vkBsTp6GGGe4tH2wiowRqG4xS-q3zbB0QwF_P9mEbv3tNSfzGiNqnY4JY5isBTG7lHkdidbNzkJEAKKgWmcxbePAklhi2FG5BMwMIzh1IP6RNPusKLhY8dcZnoup9vwapZvwvNLxBrldA6Es1zyok"/>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">24k Gold Accents</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold group-hover:text-secondary transition-colors">Minimalist Gold-Leaf Wedding Cake</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">White chocolate ganache, knife-sharp edges, embellished with 24k edible gold flakes.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 font-label-md text-label-md">
+<span class="text-secondary font-semibold">Est. 3.0 kg+</span>
+<span class="text-primary font-bold">From ₹6,500</span>
+</div>
+</div>
+</div>
+<!-- Cake Card 4: Enchanted Forest Berry -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Rustic enchanted forest semi-naked cake revealing dark chocolate sponge layers, crowned with fresh blackberries, red currants, figs, and fragrant rosemary sprigs with dusting of organic powdered sugar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoJwXkRXJPvwTMtbBUECwVIjnEMvYHPCNCKcyfgmTrz4qfo-pij0_zVemqr0wizseAfixEKptrzCkmL0iJN93pJc5gN3oTLjZtZVovDffzRXSCeWKq4ByiQCWflkCQ04xxmUU48UzbefEnwuBLwyooKx04u8KzTyjd0ZZf443NjpoS3shkyzJMHkv8nqZdHaVo_Pml73AYv2bomeDOYFVVHUJoDFFC4e1mTzsaBGmJ"/>
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Rustic Naked</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold group-hover:text-secondary transition-colors">Enchanted Forest Berry Naked Cake</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Wild seasonal berries, mission figs, and aromatic rosemary sprigs over naked sponge.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0 font-label-md text-label-md">
+<span class="text-secondary font-semibold">Est. 1.5 kg</span>
+<span class="text-primary font-bold">From ₹3,100</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Atelier Guarantee Micro-strip -->
+<div class="mt-space-xl p-space-md rounded-2xl bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left">
+<div class="flex items-center gap-space-sm">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">room_service</span>
+</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Need a personalized in-person tasting?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tiered wedding cakes include an atelier consultation tasting box with 4 seasonal cake cubes.</p>
+</div>
+</div>
+<a class="px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-colors shrink-0" href="#cakeOrderForm">
+          Book Atelier Slot
+        </a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface shadow-[0_-4px_24px_rgba(66,37,29,0.08)]"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl lg:gap-gutter pb-space-xl"><div class="flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-highest tracking-tight">Crumble &amp; Co.</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim mt-1">Atelier &amp; Fournil</span></div><p class="font-body-md text-body-md text-outline-variant leading-relaxed max-w-sm">Handcrafted artisan baking with pure cultured butter, heirloom stoneground grains, and unhurried passion. Freshly baked, happier days.</p><div class="flex items-center gap-space-md pt-space-xs"><a aria-label="Instagram" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="WhatsApp Orders" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">chat</span></a><a aria-label="Email Concierge" class="w-9 h-9 rounded-full bg-tertiary-container text-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a></div></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Quick Links</h3><nav class="flex flex-col gap-space-sm font-body-md text-body-md"><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="home" href="#">Home</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="shop" href="#">Our Bakes</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="custom-cakes" href="#">Custom Cakes</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="celebration-gallery" href="#">Celebration Gallery</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="about-us" href="#">About Us</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="contact" href="#">Contact Us</a><a class="text-outline-variant hover:text-surface-container transition-colors" data-path="order-tracking" href="#">Order Tracking</a></nav></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Bakery Specialties</h3><ul class="flex flex-col gap-space-sm font-body-md text-body-md text-outline-variant"><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Artisan Sourdough</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Decadent Truffle Cakes</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>French Macarons</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Seasonal Tea Cakes</li><li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>Vegan &amp; Eggless Bakes</li></ul></div><div class="flex flex-col gap-space-md"><h3 class="font-headline-sm text-headline-sm text-surface-container-highest">Bakery Atelier</h3><div class="flex flex-col gap-space-sm font-body-md text-body-md text-outline-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">schedule</span><span>Boutique: 8:00 AM – 10:00 PM Daily</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">bakery_dining</span><span>Fresh Bake Drops: 9:00 AM &amp; 4:00 PM</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary-fixed-dim mt-0.5">local_shipping</span><span>City-wide refrigerated dispatch</span></div></div><div class="p-space-md rounded-lg bg-tertiary-container/80 text-surface-container-low"><div class="flex items-center gap-space-xs mb-1"><span class="material-symbols-outlined text-[16px] text-secondary-fixed-dim">info</span><span class="font-label-md text-label-md font-semibold text-secondary-fixed-dim">Offline Payments</span></div><p class="font-body-sm text-body-sm text-outline-variant">Orders confirmed via WhatsApp &amp; phone call. No advance card gateway needed.</p></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex flex-wrap items-center justify-center md:justify-start gap-space-md"><a class="hover:text-surface-container transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span>•</span><a class="hover:text-surface-container transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a><span>•</span><span>FSSAI Lic. No. 10022022000541</span></div><p class="text-center md:text-right">© 2025 Crumble &amp; Co. Bakery &amp; Patisserie. All rights reserved.</p></div></div></footer></body></html>

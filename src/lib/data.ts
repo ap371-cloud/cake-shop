@@ -286,9 +286,9 @@ export const CATEGORIES: { name: ProductCategory; description: string; image: st
 export const STORE_SETTINGS: StoreSettings = {
   deliveryFee: 50,
   freeDeliveryThreshold: 1500,
-  phone: "[Your bakery phone number]",
-  email: "hello@[yourdomain].com",
-  address: "[Boutique address — Freeganj, Ujjain]",
+  phone: "+91 (0734) 251-0988",
+  email: "concierge@crumbleandco.com",
+  address: "12, Dewas Gate Road, Freeganj, Ujjain 456010",
   openingHours: "8:00 AM – 10:00 PM Daily",
   bakeDropTimes: "Fresh Bake Drops: 9:00 AM & 4:00 PM",
 };
