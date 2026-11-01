@@ -102,6 +102,13 @@ export async function listCakeRequests(): Promise<CustomCakeRequest[]> {
   return api<CustomCakeRequest[]>("/api/cake-requests");
 }
 
+export async function updateCakeRequestStatus(
+  id: string,
+  status: CustomCakeRequest["status"]
+): Promise<CustomCakeRequest> {
+  return api<CustomCakeRequest>("/api/cake-requests", { method: "PATCH", ...json({ id, status }) });
+}
+
 export async function createContactMessage(
   payload: Omit<ContactMessage, "id" | "createdAt">
 ): Promise<ContactMessage> {

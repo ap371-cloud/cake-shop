@@ -75,6 +75,20 @@ export async function listCakeRequests(): Promise<CustomCakeRequest[]> {
   return rows.map(toCakeRequest);
 }
 
+export async function updateCakeRequestStatus(
+  id: string,
+  status: CustomCakeRequest["status"]
+): Promise<CustomCakeRequest> {
+  const db = await getDb();
+  const { rows } = await db.query<CakeRow>(
+    "update public.custom_cake_requests set status = $2 where id = $1 returning *",
+    [id, status]
+  );
+
+  if (rows.length === 0) throw new Error("Request not found.");
+  return toCakeRequest(rows[0]);
+}
+
 export async function createContactMessage(
   input: Omit<ContactMessage, "id" | "createdAt">
 ): Promise<ContactMessage> {

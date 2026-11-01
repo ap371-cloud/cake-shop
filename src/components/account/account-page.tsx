@@ -88,7 +88,18 @@ export function AccountPage() {
 
       <h2 className="mt-10 font-display text-2xl font-semibold text-primary">Quick actions</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
-        {shortcuts.map((item) => (
+        {(user.role === "admin"
+          ? [
+              {
+                href: "/admin",
+                icon: "admin_panel_settings",
+                title: "Atelier console",
+                body: "Orders, cake briefs, messages and settings.",
+              },
+              ...shortcuts,
+            ]
+          : shortcuts
+        ).map((item) => (
           <Link
             key={item.href}
             href={item.href}

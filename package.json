@@ -12,7 +12,8 @@
     "db:smoke": "node scripts/db-smoke.mjs",
     "test:flow": "node scripts/flow-test.mjs",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "db:admin": "node scripts/make-admin.mjs"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.13",

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getCurrentUser } from "@/lib/auth";
-import { createCakeRequest, listCakeRequests } from "@/lib/server/requests";
+import { createCakeRequest, listCakeRequests, updateCakeRequestStatus } from "@/lib/server/requests";
 import { clientKey, rateLimit } from "@/lib/server/rate-limit";
 
 const REQUIRED = [
@@ -68,4 +68,27 @@ export async function GET() {
   }
 
   return NextResponse.json(await listCakeRequests());
+}
+
+const REQUEST_STATUSES = ["new", "reviewing", "quoted", "accepted", "declined"] as const;
+
+export async function PATCH(request: Request) {
+  const user = await getCurrentUser();
+  if (user?.role !== "admin") {
+    return NextResponse.json({ error: "Only an administrator can update requests." }, { status: 403 });
+  }
+
+  const body = await request.json();
+  const status = String(body.status ?? "");
+  if (!REQUEST_STATUSES.includes(status as (typeof REQUEST_STATUSES)[number])) {
+    return NextResponse.json({ error: "Unknown request status." }, { status: 400 });
+  }
+
+  try {
+    const updated = await updateCakeRequestStatus(String(body.id ?? ""), status as (typeof REQUEST_STATUSES)[number]);
+    return NextResponse.json(updated);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Could not update the request.";
+    return NextResponse.json({ error: message }, { status: 400 });
+  }
 }
