@@ -56,7 +56,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2.5">
             {SHOP_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-body text-on-surface-variant transition-colors hover:text-primary">
+                <Link href={link.href} className="inline-block py-1 text-body text-on-surface-variant transition-colors hover:text-primary">
                   {link.label}
                 </Link>
               </li>
@@ -69,7 +69,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2.5">
             {HELP_LINKS.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-body text-on-surface-variant transition-colors hover:text-primary">
+                <Link href={link.href} className="inline-block py-1 text-body text-on-surface-variant transition-colors hover:text-primary">
                   {link.label}
                 </Link>
               </li>
@@ -98,7 +98,7 @@ export function SiteFooter() {
           <p>© <CopyrightYear /> Crumble &amp; Co. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             {LEGAL_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="transition-colors hover:text-primary">
+              <Link key={link.href} href={link.href} className="inline-block py-1 transition-colors hover:text-primary">
                 {link.label}
               </Link>
             ))}

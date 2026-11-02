@@ -29,6 +29,25 @@ export function SiteHeader({ user }: { user: UserProfile | null }) {
   useEffect(() => setMounted(true), []);
   useEffect(() => setMenuOpen(false), [pathname]);
 
+  // Without this the page keeps scrolling behind the open drawer, which makes
+  // the menu feel broken on a phone.
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setMenuOpen(false);
+    }
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [menuOpen]);
+
   const count = mounted ? cartCount(lines) : 0;
 
   function submitSearch(event: React.FormEvent) {
@@ -40,11 +59,12 @@ export function SiteHeader({ user }: { user: UserProfile | null }) {
 
   return (
     <header className="sticky top-0 z-40 border-b border-outline-variant/50 bg-background/92 backdrop-blur-md">
-      <div className="bg-primary-container px-4 py-1.5 text-center text-label-sm uppercase tracking-[0.14em] text-on-primary">
-        Fresh bake drops 9 AM &amp; 4 PM · Free delivery above ₹1,500
+      <div className="bg-primary-container px-4 py-1.5 text-center text-label-sm uppercase tracking-[0.1em] text-on-primary sm:tracking-[0.14em]">
+        Fresh bake drops 9 AM &amp; 4 PM
+        <span className="hidden sm:inline"> · Free delivery above ₹1,500</span>
       </div>
 
-      <div className="mx-auto flex h-18 w-full max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center gap-4 px-4 sm:h-18 sm:px-6 lg:px-8">
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}

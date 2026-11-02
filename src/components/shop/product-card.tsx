@@ -66,7 +66,7 @@ export function ProductCard({
           />
         </span>
         {product.bestseller && (
-          <span className="absolute right-3 top-3 rounded-full bg-gold px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-on-surface">
+          <span className="absolute right-3 top-3 rounded-full bg-gold px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-on-surface">
             Bestseller
           </span>
         )}
@@ -94,7 +94,7 @@ export function ProductCard({
                 key={v.id}
                 type="button"
                 onClick={() => setSelectedVariant(v)}
-                className={`rounded-full border px-2.5 py-0.5 text-label-sm transition-colors ${
+                className={`rounded-full border px-3 py-1 text-label-sm transition-colors ${
                   selectedVariant?.id === v.id
                     ? "border-primary-container bg-primary-container text-on-primary"
                     : "border-outline-variant bg-surface-container-low text-on-surface-variant hover:border-primary-container"
