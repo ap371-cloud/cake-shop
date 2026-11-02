@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Heart, Menu, Search, ShoppingBag, User, X } from "lucide-react";
+import { Menu, Search, ShoppingBag, User, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { cartCount, useCart } from "@/store/cart";
 import type { UserProfile } from "@/types";
@@ -97,14 +97,6 @@ export function SiteHeader({ user }: { user: UserProfile | null }) {
           </button>
 
           <Link
-            href="/wishlist"
-            aria-label="Wishlist"
-            className="hidden rounded-full p-2.5 text-primary transition-colors hover:bg-surface-container-low sm:block"
-          >
-            <Heart className="size-5" aria-hidden />
-          </Link>
-
-          <Link
             href={user ? "/account" : "/login"}
             aria-label={user ? "Your account" : "Log in"}
             className="rounded-full p-2.5 text-primary transition-colors hover:bg-surface-container-low"
@@ -173,11 +165,6 @@ export function SiteHeader({ user }: { user: UserProfile | null }) {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link href="/wishlist" className="block border-b border-outline-variant/40 py-3 text-title-lg text-primary">
-                Wishlist
-              </Link>
-            </li>
             <li>
               <Link href={user ? "/account" : "/login"} className="block py-3 text-title-lg text-primary">
                 {user ? "My Account" : "Log In"}

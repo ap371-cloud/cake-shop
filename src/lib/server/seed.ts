@@ -1,5 +1,6 @@
 import type { PGlite } from "@electric-sql/pglite";
 import { CATEGORIES, PRODUCTS, STORE_SETTINGS } from "@/lib/data";
+import { hashPassword } from "./password";
 
 function slugify(text: string) {
   return text
@@ -126,5 +127,30 @@ export async function seedDatabase(db: PGlite) {
       STORE_SETTINGS.openingHours,
       STORE_SETTINGS.bakeDropTimes,
     ]
+  );
+
+  await seedDemoAdmin(db);
+}
+
+// The deployed demo runs on an in-memory database, so there is no shell to run
+// `npm run db:admin` against. Env vars give it an owner account on every boot.
+async function seedDemoAdmin(db: PGlite) {
+  const email = process.env.DEMO_ADMIN_EMAIL;
+  const password = process.env.DEMO_ADMIN_PASSWORD;
+  if (!email || !password) return;
+
+  const { rows } = await db.query<{ id: string }>(
+    `insert into auth.users (email, encrypted_password, email_confirmed_at, raw_user_meta_data)
+     values ($1, $2, now(), $3::jsonb)
+     on conflict (email) do update set encrypted_password = excluded.encrypted_password
+     returning id`,
+    [email, await hashPassword(password), JSON.stringify({ full_name: "Atelier Owner" })]
+  );
+
+  await db.query(
+    `insert into public.profiles (id, full_name, role)
+     values ($1, $2, 'admin')
+     on conflict (id) do update set role = 'admin'`,
+    [rows[0].id, "Atelier Owner"]
   );
 }

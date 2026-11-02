@@ -1,32 +1,11 @@
-import { createHash, randomBytes, scrypt, timingSafeEqual } from "node:crypto";
-import { promisify } from "node:util";
+import { createHash, randomBytes } from "node:crypto";
 import { cookies } from "next/headers";
 import type { UserProfile } from "@/types";
 import { getDb } from "./db";
-
-const scryptAsync = promisify(scrypt) as (
-  password: string,
-  salt: string,
-  keylen: number
-) => Promise<Buffer>;
+import { hashPassword, verifyPassword } from "./password";
 
 export const SESSION_COOKIE = "crumble_session";
 const SESSION_DAYS = 30;
-
-export async function hashPassword(password: string) {
-  const salt = randomBytes(16).toString("hex");
-  const derived = await scryptAsync(password, salt, 64);
-  return `scrypt$${salt}$${derived.toString("hex")}`;
-}
-
-export async function verifyPassword(password: string, stored: string) {
-  const [scheme, salt, digest] = stored.split("$");
-  if (scheme !== "scrypt" || !salt || !digest) return false;
-
-  const derived = await scryptAsync(password, salt, 64);
-  const expected = Buffer.from(digest, "hex");
-  return derived.length === expected.length && timingSafeEqual(derived, expected);
-}
 
 const digestToken = (token: string) => createHash("sha256").update(token).digest("hex");
 

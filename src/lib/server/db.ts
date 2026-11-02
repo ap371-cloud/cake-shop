@@ -12,6 +12,10 @@ const dataDir = path.join(process.cwd(), ".data", "pg");
 const shimsFile = path.join("supabase", "local", "00-shims.sql");
 const migrationFile = path.join("supabase", "migrations", "20261031000001_init.sql");
 
+// Vercel's filesystem is read-only, so the deployed demo keeps Postgres in
+// memory: seeded on cold start, gone when the function instance recycles.
+const isServerless = Boolean(process.env.VERCEL);
+
 // A dev server killed with Ctrl+C (or restarted when next.config.ts changes)
 // leaves postmaster.pid behind and PGlite then refuses to start. Only remove
 // the file when that pid is actually gone.
@@ -46,7 +50,15 @@ export function getDb() {
 }
 
 async function openDatabase() {
-  mkdirSync(dataDir, { recursive: true });
+  if (isServerless) return start();
+
+  try {
+    mkdirSync(dataDir, { recursive: true });
+  } catch {
+    // Read-only filesystem without VERCEL set — memory is the only option.
+    return start();
+  }
+
   clearStaleLock(dataDir);
 
   try {
@@ -71,8 +83,8 @@ async function openDatabase() {
   }
 }
 
-async function start(dir: string) {
-  const db = new PGlite(dir);
+async function start(dir?: string) {
+  const db = dir ? new PGlite(dir) : new PGlite();
 
   const { rows } = await db.query<{ ready: boolean }>(
     "select to_regclass('public.products') is not null as ready"
